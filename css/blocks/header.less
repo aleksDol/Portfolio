@@ -1,0 +1,17 @@
+//main:../style.less
+.header{
+    padding: 1.2rem 0;
+    position: relative;
+    @media @mobile{
+        position: fixed;
+        top: 0;
+        background-color: #fff;
+        z-index: 20000;
+        right: 0;
+        left: 0;
+    }
+}
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+}

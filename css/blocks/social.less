@@ -1,0 +1,25 @@
+//main:../style.less
+
+.social{
+    margin-bottom: 42px;
+    display: flex;
+    @media @mobile-sm{
+        justify-content: center;
+    }
+}
+
+
+.social__icon{
+    width: 41px;
+    height: 41px;
+}
+.social__link{
+    margin-right: 10px;
+    text-decoration: none;
+
+    transition: transform .2s linear;
+
+    &:hover{
+        transform: translate(-3px, -3px);
+    }
+}

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200,300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Portfolio</title>
+</head>
+<body>
+    <!--БЛОК HEADER-->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="user">
+                    <div class="user__avatar">
+                        <img class="user__avatar-img" src="images/user_avatar.png" alt="">
+                    </div>
+                    <div class="user__content">
+                        <div class="user__name">Aleksey<br>Dolmatov</div>
+                        <div class="user__prof">Front-End Web Developer</div>
+                    </div>
+                </div>
+                <nav class="nav" id="nuv">
+                    <a href="#works-id" class="nav__link nav__link-scroll active">работы</a>
+                    <a href="#about-id" class="nav__link nav__link-scroll">обо мне</a>
+                    <a href="#news-id" class="nav__link nav__link-scroll">блог</a>
+                    <a href="#contact-id" class="nav__link nav__link-scroll">контакты</a>
+                    <a href="#" data-modal="#modal_hire_me" class="nav__link nav__link--btn">нанять</a>
+                </nav>
+                <!--МЕНЮ БУРГЕР-->
+                <button class="burger" type="button" id="nuvToggle">
+                    <img class="burger__icon" src="images/meni-icons.png" alt="">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!--БЛОК INTRO-->
+    <section class="intro">
+        <div class="container">
+            <div class="intro__inner">
+                <div class="intro__content">
+                    <h2 class="intro__subtittle">Приветствую, я</h2>
+                    <h1 class="intro__tittle">Алексей Долматов</h1>
+                    <div class="intro__text">Front-End Web Developer</div>
+                    
+                    <div class="social">
+                        <a href="#" class="social__link">
+                            <img class="social__icon" src="images/telegram-icon.png" alt="">
+                        </a>
+                        <a href="#" class="social__link">
+                            <img class="social__icon" src="images/tweetter-icon.png" alt="">
+                        </a>
+                        <a href="#" class="social__link">
+                            <img class="social__icon" src="images/vkontacte-icons.png" alt="">
+                        </a>
+                        <a href="#" class="social__link">
+                            <img class="social__icon" src="images/youtube-icon.png" alt="">
+                        </a>
+                        <a href="#" class="social__link">
+                            <img class="social__icon" src="images/git-hub icons.png" alt="">
+                        </a>
+                    </div>
+
+                    <a class="btn" href="#" data-modal="#modal_hire_me">нанять</a>
+                    <button class="btn" type="button" data-modal="#modal_resume">смотреть резюме</button>
+                </div>
+                
+                        <img class="intro__photo" src="images/intro-photo.png" alt="">
+                
+            </div>
+        </div>
+    </section>
+
+    <!--БЛОК WORKS-->
+    <div id="works-id" class="works">
+        <div class="container">
+
+            <div class="works__nav">
+                <a href="#" class="works__nav-links" data-filter="all">Все</a>
+                <a href="#" class="works__nav-links" data-filter="app">Приложения</a>
+                <a href="#" class="works__nav-links" data-filter="website">Сайты</a>
+                <a href="#" class="works__nav-links" data-filter="interaction">Другое</a>
+            </div>
+
+            <div class="portfolio">
+                <div class="portfolio__col" data-modal="#modal_project1" data-cat="app">
+                    <div class="work">
+                            <img src="images/work-icons.png" alt="" class="work__photo">
+                            <div class="work__content">
+                                <div class="work__cat">Category: app</div>
+                                <div class="work__tittle">
+                                    Project tittle
+                                    <div class="work__date">2022</div>
+                                </div>
+                            </div>
+                    </div>
+                   
+                </div>
+                <div class="portfolio__col" data-cat="website">
+                    <div class="work">
+                            <img src="images/work-icons.png" alt="" class="work__photo">
+                            <div class="work__content">
+                                <div class="work__cat">Category: website</div>
+                                <div class="work__tittle">
+                                    Project tittle
+                                    <div class="work__date">2022</div>
+                                </div>
+                            </div>
+                    </div>
+                   
+                </div>
+                <div class="portfolio__col" data-cat="interaction">
+                    <div class="work">
+                            <img src="images/work-icons.png" alt="" class="work__photo">
+                            <div class="work__content">
+                                <div class="work__cat">Category: interaction</div>
+                                <div class="work__tittle">
+                                    Project tittle
+                                    <div class="work__date">2022</div>
+                                </div>
+                            </div>
+                    </div>
+                   
+                </div>
+                <div class="portfolio__col" data-cat="app">
+                    <div class="work">
+                            <img src="images/work-icons.png" alt="" class="work__photo">
+                            <div class="work__content">
+                                <div class="work__cat">Category: app</div>
+                                <div class="work__tittle">
+                                    Project tittle
+                                    <div class="work__date">2022</div>
+                                </div>
+                            </div>
+                    </div>
+                   
+                </div>
+                <div class="portfolio__col" data-cat="website">
+                    <div class="work">
+                            <img src="images/work-icons.png" alt="" class="work__photo">
+                            <div class="work__content">
+                                <div class="work__cat">Category: website</div>
+                                <div class="work__tittle">
+                                    Project tittle
+                                    <div class="work__date">2022</div>
+                                </div>
+                            </div>
+                    </div>
+                   
+                </div>
+                <div class="portfolio__col" data-cat="interaction">
+                    <div class="work">
+                            <img src="images/work-icons.png" alt="" class="work__photo">
+                            <div class="work__content">
+                                <div class="work__cat">Category: interaction</div>
+                                <div class="work__tittle">
+                                    Project tittle
+                                    <div class="work__date">2022</div>
+                                </div>
+                            </div>
+                    </div>
+                   
+                </div>
+                <div class="portfolio__col" data-cat="app">
+                    <div class="work">
+                            <img src="images/work-icons.png" alt="" class="work__photo">
+                            <div class="work__content">
+                                <div class="work__cat">Category:app</div>
+                                <div class="work__tittle">
+                                    Project tittle
+                                    <div class="work__date">2022</div>
+                                </div>
+                            </div>
+                    </div>
+                   
+                </div>
+                <div class="portfolio__col" data-cat="website">
+                    <div class="work">
+                            <img src="images/work-icons.png" alt="" class="work__photo">
+                            <div class="work__content">
+                                <div class="work__cat">Category:website</div>
+                                <div class="work__tittle">
+                                    Project tittle
+                                    <div class="work__date">2022</div>
+                                </div>
+                            </div>
+                    </div>
+                   
+                </div>
+                <div class="portfolio__col" data-cat="interaction">
+                    <div class="work">
+                            <img src="images/work-icons.png" alt="" class="work__photo">
+                            <div class="work__content">
+                                <div class="work__cat">Category:interaction</div>
+                                <div class="work__tittle">
+                                    Project tittle
+                                    <div class="work__date">2022</div>
+                                </div>
+                            </div>
+                    </div>
+                   
+                </div>
+              
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn btn--sm">Load more work</a>
+            </div>
+        </div>
+    </div>
+
+    <!--БЛОК ABOUT-->
+    <section id="about-id" class="about">
+        <div class="container">
+            <div class="about__inner">
+                <div class="about__photo">
+                    <img class="img" src="images/about-me.png" alt="">
+                </div>
+                <div class="about__content">
+                    <h3 class="about__tittle">ОБО МНЕ</h3>
+                    <h2 class="about__bigtittle">КТО Я</h2>
+                    <div class="about__text">
+                        <p>Приветствую, меня зовут Алексей, и я занимаюсь Frontend разработкой. Ранее я учился в коледже на программиста, где и познакомился с основами программирования. Мы изучали язык програмирования Java, который мне не очень понравился, и я стал самостоятельно изучать Python. Позже я вспомнил что ещё в детстве пытался писать свой сайт в блокноте и меня это сподвигло на изучение такого ремесла как Frontend разработка. Часами на проолёт я изучал основы этого дела и практиковался, позже на смену различным Ютуб туториолам пришли книги. На данный момент я прочитал 1500 страниц книг по программированию. Книги были об HTML, CSS, JavaScript, Адаптивность веб сайтов и приложений. Меня всё больше и больше это затягивало. Сейчас я активно оттачиваю свои навыки и набираюсь опытом и новыми знаниями. Почему мне нравить программирование? Потому что за ним будущее. Программист как никто другой может чувствовать свою значимость и воплощать в реальность невероятные вещь. Программист - строитель будущего</p>
+                    </div>
+                    
+                    <a class="btn"  data-modal="#modal_hire_me" href="#">нанять</a>
+                    <button class="btn" data-modal="#modal_resume" type="button">смотеть резюме</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--БЛОК REVIEWS-->
+    <div class="reviews">
+        <div class="container">
+            <div class="reviews__item">
+                <div class="reviews__text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tempora quidem ut veritatis, porro eum cupiditate, eos quas aspernatur, numquam error quasi magni explicabo unde nostrum ipsa ad suscipit odio!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tempora quidem ut veritatis, porro eum cupiditate, eos quas aspernatur, numquam error quasi magni explicabo unde nostrum ipsa ad suscipit odio!</p>
+                </div>
+                <div class="reviews__author">
+                    <img class="reviews__photo" src="images/rewiews-avatar.png" alt="">
+                    <div class="reviews__name">Edward M. Brooks</div>
+                    <div class="reviews__company">Marketing House</div>
+                    <div class="reviews__rating">
+                        <img class="reviews__star" height="13" width="13" src="images/star-icon.png" alt="">
+                        <img class="reviews__star" height="13" width="13" src="images/star-icon.png" alt="">
+                        <img class="reviews__star" height="13" width="13" src="images/star-icon.png" alt="">
+                        <img class="reviews__star" height="13" width="13" src="images/star-icon.png" alt="">
+                        <img class="reviews__star reviews__star--unactive" height="13" width="13" src="images/star-icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--БЛОК NEWS-->
+    <section id="news-id" class="news">
+        <div class="container">
+            
+            <div class="news__header">
+                <h3 class="news__tittle">СМОТРЕТЬ МЕНЯ</h3>
+                <div class="news__text">Иногда я говорю что-то умное</div>
+            </div>
+
+            <div class="articals">
+                <div class="articals__col">
+                    <div class="articals__item">
+                        <div class="articals__header">
+                            <time class="artical__date">20<br>june</time>
+                            <img src="images/news-photo.png" alt="" class="article__photo">
+                        </div>
+                        <div class="artical__content">
+                            <h4 class="artical__tittle">WEBSITE INSPIRATION</h4>
+                            <div class="artical__cat">CATEGORY</div>
+                            <div class="artical__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn sm">смотреть ещё</a>
+                    </div>
+                </div>
+                <div class="articals__col">
+                    <div class="articals__item">
+                        <div class="articals__header">
+                            <time class="artical__date">20<br>june</time>
+                            <img src="images/news-photo.png" alt="" class="article__photo">
+                        </div>
+                        <div class="artical__content">
+                            <h4 class="artical__tittle">WEBSITE INSPIRATION</h4>
+                            <div class="artical__cat">CATEGORY</div>
+                            <div class="artical__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn sm">смотреть ещё</a>
+                    </div>
+                </div>
+                <div class="articals__col">
+                    <div class="articals__item">
+                        <div class="articals__header">
+                            <time class="artical__date">20<br>june</time>
+                            <img src="images/news-photo.png" alt="" class="article__photo">
+                        </div>
+                        <div class="artical__content">
+                            <h4 class="artical__tittle">WEBSITE INSPIRATION</h4>
+                            <div class="artical__cat">CATEGORY</div>
+                            <div class="artical__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn sm">смотреть ещё</a>
+                    </div>
+                </div>
+            </div>
+            <div class="news_footer">
+                <a href="#" class="news__footer-link">Смотреть больше видео</a>
+            </div>
+        </div>
+    </section>
+
+    <!--БЛОК FOOTER-->
+    <footer id="contact-id" class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__credits">
+                    <div class="footer__copyright">
+                        © 2022 - Dolmatov Aleksej
+                    </div>
+                    <div class="footer__social">
+                         <a href="#" target="_blank" class="footer__social-link">
+                             <img class="footer__social-icons" src="images/tweeter-footer.png" alt="">
+                         </a>
+                         <a href="#" target="_blank" class="footer__social-link">
+                             <img class="footer__social-icons" src="images/wk-footer.png" alt="">
+                         </a>
+                         <a href="#" target="_blank" class="footer__social-link">
+                             <img class="footer__social-icons" src="images/telegram-footer.png" alt="">
+                         </a>
+                         <a href="#" target="_blank" class="footer__social-link">
+                             <img class="footer__social-icons" src="images/yt-footer.png" alt="">
+                         </a>
+                    </div>
+                </div>
+                <div class="footer__nav">
+                    <a href="#works-id" class="footer__nav-link footer__nav-link--scroll">Работы</a>
+                    <a href="#about-id" class="footer__nav-link footer__nav-link--scroll">Обо мне</a>
+                    <a href="#news-id" class="footer__nav-link footer__nav-link--scroll">Блог</a>
+                    <a href="#contact-id" class="footer__nav-link footer__nav-link--scroll">Контакты</a>
+                    <a href="#" data-modal="#modal_hire_me" class="footer__nav-link footer__nav-link--btn">Нанять</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--блок модального окна-->
+    <div class="modal" id="modal_project1">
+        <div class="modal__dialog">
+             
+                <button class="modal__close" data-close type="button">
+                    <img class="modal__close-button" src="images/clos-icon.png" alt="">
+                </button>
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo" src="images/git-hub icons.png" width="790" height="780" alt="">
+                        </div>
+                        <div>
+                            <img class="modal-work__photo" src="images/vkontacte-icons.png" width="790" height="780" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__tittle">
+                            Project tittle
+                        </h3>
+                        <div class="modal-work__info">
+                            category <span class="modal-work__info-divider" >|</span> 2022
+                        </div>
+                    </div>
+                    <div class="modal-work__client">
+                        <div class="modal-work__client-tittle" >Client</div>
+                        <div class="modal-work__client-company" >Creative Agent</div>
+                    </div>
+                    <div class="modal-work__text">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit aperiam perferendis laborum at quas dolor rerum optio reprehenderit quis accusantium cum dolorum, aspernatur molestiae temporibus. Velit reiciendis cupiditate hic in.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit aperiam perferendis laborum at quas dolor rerum optio reprehenderit quis accusantium cum dolorum, aspernatur molestiae temporibus. Velit reiciendis cupiditate hic in.
+                        </p>
+                    </div>
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn modal-work__btn--prev slick-prev" type="button" > Previous </button>
+                        <button class="modal-work__btn modal-work__btn--next slick-next" type="button" >Next </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--блок второго модального окна-->
+    <div class="modal" id="modal_resume">
+        <div class="modal__dialog">
+             
+                <button class="modal__close" data-close type="button">
+                    <img class="modal__close-button" src="images/clos-icon.png" alt="">
+                </button>
+                <div id="modal_content-id" class="modal_content">
+                    <h3 class="modal__tittle text-center">RESUME</h3>
+
+                    <div class="text-center">
+                        <a href="#" download="/images/resume.png" class="btn btn--thin">СКАЧАТЬ PDF</a>
+                    <a onClick="javascript:CallPrint('tili')" class="btn btn--thin">ПЕЧАТЬ</a>
+                    </div>
+
+
+                    <div id="tili" class="timeline">
+                        <!--Верстаем левую сторону резюме-->
+                        <div class="timeline__col timeline__col--left">
+                            <div class="timeline__tittle">Опыт</div>
+
+                            <div class="timeline__item">
+                                <time class="timeline__date">2018 - <b>Первый сайт</b></time>
+                                <h5 class="timeline__subtittle">Учился в колледже</h5>
+                                <div class="timeline__position"></div>
+                                <div class="timeline__text">
+                                    <p>
+                                        Это был второй курс и нам дали задание написать простую Вэб-страницу. В этом случае я уже знал о таблице стилей и конечно её применил. Создал страницу о полётах в космос. Конечно же НЕ адаптивную под устройства. Но в этот период я понял как рабатают сайты и принцип их создания.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="timeline__item">
+                                <time class="timeline__date">2020 - <b>Информационная система</b></time>
+                                <h5 class="timeline__subtittle">3й курс коледжа</h5>
+                                <div class="timeline__position"></div>
+                                <div class="timeline__text">
+                                    <p>
+                                        В этот период нам дали задание создать информационную систему по какой либо теме а так же базу данных на Acsess. Я не был особо заинтересован в программировании но тем не менее выполнил задание на отметку 4. Эты было первое погружение в IT, в результате которого я понял как создаются проекты что такое ТЗ, как с этим сработаться и как выполнять поставленные задачи в этой сфере
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="timeline__item">
+                                <time class="timeline__date">2021 - <b>Полноценная программа</b></time>
+                                <h5 class="timeline__subtittle">Выпускник</h5>
+                                <div class="timeline__position"></div>
+                                <div class="timeline__text">
+                                    <p>
+                                        Да, разрыв был большой между этими проектами. Дело в том что было очень много теории из-за которой я не мог работать на своими проектами. Но к диплому я написал программу для учёта и аренды авто. Была она на писана на языке Java(который мне вообще не нравился) с применением фреймворка Hibernate. Получил я за этот проект отметку 4. И вот именно с этого момента меня начало затягивать программирование. Я уже понимал как реализуют проеты от нуля и до конечной цели. Понимал основы программирования и познакомился с некоторыми фреймворками 
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="timeline__item">
+                                <time class="timeline__date">2021 - <b>Погружение в программирование</b></time>
+                                <h5 class="timeline__subtittle">Frontend</h5>
+                                <div class="timeline__position"></div>
+                                <div class="timeline__text">
+                                    <p>
+                                        После обучиния у меня появилось больше времени чтобы заниматься программированием сайтов. И я сверстал своё портфолио а потом уже сверстал свой сайт. Я начал досконально изучать тонконсти этого ремесла. Изучал и изучаю различные технологии и фишки продолжаю практиковаться. За этот период(9 месяцев), я научился большему чем за 4 года в колледже. Я сверстал 9 сайтов некоторые из них попали в моё портфолио,  сделал их адаптивными и интерактивными. Изучил различные методологии и техники. Сейчас я продалжаю активно развивать свои способности 
+                                    </p>
+                                </div>
+                            </div>
+                          
+                        </div>
+
+                        <!--Верстаем правую сторону резюме-->
+                        <div class="timeline__col timeline__col--right">
+                            <h4 class="timeline__tittle">навыки</h4>
+
+                            <div class="timeline__item">
+                                <time class="timeline__date"><b>Бысторо обучаюсь</b></time>
+                                <h5 class="timeline__subtittle"></h5>
+                                <div class="timeline__position">Мои успехи за 9 месяцев самообучения превозходят обучение за 4 года в колледже. Я думаю это стоит отметить. Сейчас обучение идёт ещё быстрее</div>
+                            </div>
+                            <div class="timeline__item">
+                                <time class="timeline__date"><b>Быстро нахожу информацию</b></time>
+                                <h5 class="timeline__subtittle"></h5>
+                                <div class="timeline__position">Когда вы познаёте что-то новое и делаете это самостоятельно этот навык рано или поздно прийдёт поэтому он у меня есть. </div>
+                            </div>
+                            <h4 class="timeline__tittle">skills</h4>
+                            <div class="progres-bar">
+                                <div class="progres-bar__items">
+                                    <div class="progres-bar__left">
+                                        <div class="progres-bar__tittle">
+                                            HTML
+                                        </div>
+                                    </div>
+                                    <div class="progres-bar__right">
+                                        <div class="progres-bar__bar">
+                                            <div class="progres-bar__progress" style="width: 90%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progres-bar__items">
+                                    <div class="progres-bar__left">
+                                        <div class="progres-bar__tittle">
+                                            CSS
+                                        </div>
+                                    </div>
+                                    <div class="progres-bar__right">
+                                        <div class="progres-bar__bar">
+                                            <div class="progres-bar__progress" style="width: 85%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progres-bar__items">
+                                    <div class="progres-bar__left">
+                                        <div class="progres-bar__tittle">
+                                            JavaScript
+                                        </div>
+                                    </div>
+                                    <div class="progres-bar__right">
+                                        <div class="progres-bar__bar">
+                                            <div class="progres-bar__progress" style="width: 70%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progres-bar__items">
+                                    <div class="progres-bar__left">
+                                        <div class="progres-bar__tittle">
+                                            БЭМ
+                                        </div>
+                                    </div>
+                                    <div class="progres-bar__right">
+                                        <div class="progres-bar__bar">
+                                            <div class="progres-bar__progress" style="width: 80%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progres-bar__items">
+                                    <div class="progres-bar__left">
+                                        <div class="progres-bar__tittle">
+                                            Адаптив
+                                        </div>
+                                    </div>
+                                    <div class="progres-bar__right">
+                                        <div class="progres-bar__bar">
+                                            <div class="progres-bar__progress" style="width: 75%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progres-bar__items">
+                                    <div class="progres-bar__left">
+                                        <div class="progres-bar__tittle">
+                                            saas
+                                        </div>
+                                    </div>
+                                    <div class="progres-bar__right">
+                                        <div class="progres-bar__bar">
+                                            <div class="progres-bar__progress" style="width: 80%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progres-bar__items">
+                                    <div class="progres-bar__left">
+                                        <div class="progres-bar__tittle">
+                                            Bootstrap
+                                        </div>
+                                    </div>
+                                    <div class="progres-bar__right">
+                                        <div class="progres-bar__bar">
+                                            <div class="progres-bar__progress" style="width: 10%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progres-bar__items">
+                                    <div class="progres-bar__left">
+                                        <div class="progres-bar__tittle">
+                                            React
+                                        </div>
+                                    </div>
+                                    <div class="progres-bar__right">
+                                        <div class="progres-bar__bar">
+                                            <div class="progres-bar__progress" style="width: 5%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progres-bar__items">
+                                    <div class="progres-bar__left">
+                                        <div class="progres-bar__tittle">
+                                            GIT
+                                        </div>
+                                    </div>
+                                    <div class="progres-bar__right">
+                                        <div class="progres-bar__bar">
+                                            <div class="progres-bar__progress" style="width: 35%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+
+                            <h4 class="timeline__tittle">Награды</h4>
+                            <div class="timeline__item">
+                                <time class="timeline__date"><b>Их пока что нет</b></time>
+                                <h5 class="timeline__subtittle"></h5>
+                                <div class="timeline__position">Но я буду стремится к этому</div>
+                                <div class="timeline__text">
+                                    <p>
+                                        В будущем я не буду останавливаться только на этих языках. Я планирую изучать Python в том числе и для Вэба. Так же планирую изучать базы данных и работать с ними. Буду стараться чтобы добится отличных результатов
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <a href="#" data-modal="#modal_hire_me" class="btn">нанять</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!--блок третьего модального окна-->
+    <div class="modal" id="modal_hire_me">
+        <div class="modal__dialog modal__dialog--sm">
+             
+            <button class="modal__close" data-close type="button">
+                    <img class="modal__close-button" src="images/clos-icon.png" alt="">
+                </button>
+                   
+                <div class="contact">
+                    <div class="contact__left">
+                        <h3 class="modal__tittle mb-0">LET`S TALK</h3>
+                        <div class="modal__subtittle">CALL ME OR SEND ME A REQUEST</div>
+                        <ul class="contact__info">
+                            <li class="contact__info-item">
+                                <img class="contact__info-icon" src="images/email-icon.png" style="width: 25px; height: 25px;" alt="">
+                                +7999999999
+                            </li>
+                            <li class="contact__info-item">
+                                <img class="contact__info-icon" src="images/telephone-icon.png" style="width: 25px; height: 25px;" alt="">
+                                dolmatovaleksej855@gmail.com
+                            </li>
+                        </ul>
+
+                        <form class="form" action="/" method="post">
+                            <div class="form__group">
+                                <label for="input-email" class="form__label">Adress e-mail</label>
+                            <input type="text" id="input-email" class="form__input" placeholder="Adress e-mail">
+                            </div>
+
+
+                            <div class="form__group">
+                                <label for="input-text" class="form__label">Request</label>
+                                <textarea class="form__textarea" name="input-text" id="input-text" placeholder="Type you request..."></textarea>
+                            </div>
+
+                            
+                        </form>
+                        <div class="text-right">
+                            <button class="btn" type="submit">SEND</button>
+                        </div>
+                        
+
+                    </div>
+                    <div class="contact__right"></div>
+                </div>
+        </div>
+    </div>
+
+    <!--JS-->
+    <script src="JS/slick.min.js"></script>
+    <script src="JS/app.js"></script>
+
+</body>
+</html>
